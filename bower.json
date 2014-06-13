@@ -1,0 +1,26 @@
+{
+  "name": "react-loadermixin",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Eldredge <lettertwo@gmail.com>"
+  ],
+  "description": "A React mixin for giving components loading behavior",
+  "main": "./standalone/react-loadermixin.js",
+  "keywords": [
+    "react-mixin",
+    "react",
+    "loader",
+    "mixin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hzdg/react-loadermixin",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test"
+  ],
+  "devDependencies": {
+    "react": "~0.10.0"
+  }
+}
