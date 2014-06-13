@@ -61,19 +61,19 @@ load cycle.
   </thead>
   <tbody>
     <tr>
-      <td>`src`</td>
+      <td><code>src</code></td>
       <td>string</td>
       <td>The URL of an asset to be loaded.</td>
     </tr>
     <tr>
-      <td>`onLoad`</td>
+      <td><code>onLoad</code></td>
       <td>function</td>
-      <td>A handler for the loader function's `onLoad` event.</td>
+      <td>A handler for the loader function's <code>onLoad</code> event.</td>
     </tr>
     <tr>
-      <td>`onError`</td>
+      <td><code>onError</code></td>
       <td>function</td>
-      <td>A handler for the loader function's `onError` event.</td>
+      <td>A handler for the loader function's <code>onError</code> event.</td>
     </tr>
   </tbody>
 </table>
@@ -92,14 +92,15 @@ These methods are provided to the component class by the mixin.
   </thead>
   <tbody>
     <tr>
-      <td>`renderLoader`</td>
-      <td>function `loader`, object `props`</td>
+      <td><code>renderLoader</code></td>
+      <td>function <code>loader</code>, object <code>props</code></td>
       <td>A helper method that automates starting the load and binding to its
-          events. Accepts a `loader` function and optional `props` as arguments.
-          The `loader` function is expected to accept `src`, `onLoad`, and
-          `onError` props, and to return a 'renderable' value (such as a
-          component instance). The `renderLoader` method should be called in
-          the component's `render()` method.</td>
+          events. Accepts a <code>loader</code> function and optional
+          <code>props</code> as arguments. The <code>loader</code> function is
+          expected to accept <code>src</code>, <code>onLoad</code>, and
+          <code>onError</code> props, and to return a 'renderable' value (such
+          as a component instance). The <code>renderLoader</code> method should
+          be called in the component's <code>render()</code> method.</td>
     </tr>
   </tbody>
 </table>
@@ -119,14 +120,16 @@ the load cycle.
   </thead>
   <tbody>
     <tr>
-      <td>`loaderDidLoad`</td>
+      <td><code>loaderDidLoad</code></td>
       <td>Invoked when the loader function has successfully loaded the asset.
-          This is invoked immediately before the `props.onLoad` callback.</td>
+          This is invoked immediately before the <code>props.onLoad</code>
+          callback.</td>
     </tr>
     <tr>
-      <td>`loaderDidError`</td>
+      <td><code>loaderDidError</code></td>
       <td>Invoked when the loader function has failed to load the asset.
-          This is invoked immediately before the `props.onError` callback.</td>
+          This is invoked immediately before the <code>props.onError</code>
+          callback.</td>
     </tr>
   </tbody>
 </table>
