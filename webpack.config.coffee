@@ -6,8 +6,9 @@ module.exports =
     path: path.join __dirname, 'standalone'
     filename: 'react-loadermixin.js'
     libraryTarget: 'umd'
+    library: 'ReactLoaderMixin'
     target: 'web'
-  externals: ['react']
+  externals: ['React']
   module:
     loaders: [
       {test: /\.coffee$/, loader: 'coffee'}

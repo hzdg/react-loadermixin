@@ -1,65 +1,131 @@
-!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.ReactLoaderMixin=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
-var PropTypes, React, ReactLoaderMixin, merge,
-  __slice = [].slice;
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("React"));
+	else if(typeof define === 'function' && define.amd)
+		define(["React"], factory);
+	else if(typeof exports === 'object')
+		exports["ReactLoaderMixin"] = factory(require("React"));
+	else
+		root["ReactLoaderMixin"] = factory(root["React"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
 
-React = (window.React);
+	var PropTypes, React, ReactLoaderMixin, merge,
+	  __slice = [].slice;
 
-merge = _dereq_('xtend');
+	React = __webpack_require__(1);
 
-PropTypes = React.PropTypes;
+	merge = __webpack_require__(2);
 
-module.exports = ReactLoaderMixin = {
-  propTypes: {
-    src: PropTypes.string,
-    onLoad: PropTypes.func,
-    onError: PropTypes.func
-  },
-  renderLoader: function(loader, props) {
-    return loader(merge(props, {
-      src: this.props.src,
-      onLoad: (function(_this) {
-        return function() {
-          var args, _base;
-          args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-          if (typeof _this.loaderDidLoad === "function") {
-            _this.loaderDidLoad.apply(_this, args);
-          }
-          return typeof (_base = _this.props).onLoad === "function" ? _base.onLoad.apply(_base, args) : void 0;
-        };
-      })(this),
-      onError: (function(_this) {
-        return function() {
-          var args, _base;
-          args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-          if (typeof _this.loaderDidError === "function") {
-            _this.loaderDidError.apply(_this, args);
-          }
-          return typeof (_base = _this.props).onError === "function" ? _base.onError.apply(_base, args) : void 0;
-        };
-      })(this)
-    }));
-  }
-};
+	PropTypes = React.PropTypes;
 
-},{"xtend":2}],2:[function(_dereq_,module,exports){
-module.exports = extend
+	module.exports = ReactLoaderMixin = {
+	  propTypes: {
+	    src: PropTypes.string,
+	    onLoad: PropTypes.func,
+	    onError: PropTypes.func
+	  },
+	  renderLoader: function(loader, props) {
+	    return loader(merge(props, {
+	      src: this.props.src,
+	      onLoad: (function(_this) {
+	        return function() {
+	          var args, _base;
+	          args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+	          if (typeof _this.loaderDidLoad === "function") {
+	            _this.loaderDidLoad.apply(_this, args);
+	          }
+	          return typeof (_base = _this.props).onLoad === "function" ? _base.onLoad.apply(_base, args) : void 0;
+	        };
+	      })(this),
+	      onError: (function(_this) {
+	        return function() {
+	          var args, _base;
+	          args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+	          if (typeof _this.loaderDidError === "function") {
+	            _this.loaderDidError.apply(_this, args);
+	          }
+	          return typeof (_base = _this.props).onError === "function" ? _base.onError.apply(_base, args) : void 0;
+	        };
+	      })(this)
+	    }));
+	  }
+	};
 
-function extend() {
-    var target = {}
 
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
 
-        for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-                target[key] = source[key]
-            }
-        }
-    }
+	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
-    return target
-}
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
 
-},{}]},{},[1])
-(1)
-});
+	module.exports = extend
+
+	function extend() {
+	    var target = {}
+
+	    for (var i = 0; i < arguments.length; i++) {
+	        var source = arguments[i]
+
+	        for (var key in source) {
+	            if (source.hasOwnProperty(key)) {
+	                target[key] = source[key]
+	            }
+	        }
+	    }
+
+	    return target
+	}
+
+
+/***/ }
+/******/ ])
+})
