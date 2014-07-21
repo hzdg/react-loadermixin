@@ -1,6 +1,6 @@
 {
   "name": "react-loadermixin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React mixin for giving components loading behavior",
   "main": "./lib/index.js",
   "scripts": {
